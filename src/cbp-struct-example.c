@@ -1,4 +1,4 @@
-#include "headers/ex.h"
+#include "headers/cbp-struct-example.h"
 
 example_struct createExampleStruct(int a, int b) {
   example_struct x;

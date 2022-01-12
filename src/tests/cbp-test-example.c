@@ -1,5 +1,5 @@
 #include "../munit/munit.h"
-#include "../headers/ex.h"
+#include "../headers/cbp-struct-example.h"
 
 static MunitResult testExampleStruct (const MunitParameter params[], void* data) {
     // Compiler complains if params/data not used.

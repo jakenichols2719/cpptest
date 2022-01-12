@@ -1,4 +1,4 @@
-#include "headers/ex.h"
+#include "headers/cbp-struct-example.h"
 
 #ifdef BUILD_MAIN
 int main(int argc, char *argv[]) {
