@@ -14,7 +14,7 @@ DIR:= ./src
 SRC:= $(wildcard $(DIR)/*.c)
 TESTS:= $(wildcard $(DIR)/*.c $(DIR)/tests/*.c)
 MUNIT:= $(DIR)/munit/munit.c
-CFLAGS:= -Wall -I($(DIR)/headers) -I($(DIR)/munit)
+CFLAGS:= -Wall -I($(DIR)) -I($(DIR)/headers) -I($(DIR)/munit)
 BUILDFLAGS:= -DBUILD_MAIN
 TESTFLAGS:= -DTEST_MAIN
 
