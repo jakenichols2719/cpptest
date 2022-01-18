@@ -19,10 +19,10 @@ BUILDFLAGS:= -DBUILD_MAIN
 TESTFLAGS:= -DTEST_MAIN
 
 build: $(SRC)
-	gcc -o $@ $^ $(CFLAGS) $(BUILDFLAGS)
+	g++ -o $@ $^ $(CFLAGS) $(BUILDFLAGS)
 
 test: $(TESTS) $(MUNIT)
-	gcc -o $@ $^ $(CFLAGS) $(TESTFLAGS)
+	g++ -o $@ $^ $(CFLAGS) $(TESTFLAGS)
 
 fmt: $(SRC)
 	clang-format -i $^
