@@ -8,7 +8,7 @@ ifeq ($(OS),Windows_NT)
 else
 	UNAME_S:= $(shell uname -s)
 # Linux
-	ifeq($(UNAME_S),Linux)
+	ifeq ($(UNAME_S),Linux)
 		CLEAN:= rm build test
 		INCLUDE:= -I/$(DIR) -I/$(DIR)/headers -I/$(DIR)/munit
 endif
