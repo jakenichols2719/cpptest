@@ -11,7 +11,7 @@ endif
 
 # Basic, universal flags
 DIR:= ./src
-SRC:= $(wildcard $(DIR)/*.c $(DIR)/*.cpp)
+SRC:= $(wildcard $(DIR)/headers/*.h $(DIR)/*.h $(DIR)/*.c $(DIR)/*.cpp)
 TESTS:= $(wildcard $(DIR)/tests/*.c $(DIR)/tests/*.cpp)
 MUNIT:= $(DIR)/munit/munit.c
 CFLAGS:= -Wall -I($(DIR)) -I($(DIR)/headers) -I($(DIR)/munit)
