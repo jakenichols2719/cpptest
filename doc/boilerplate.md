@@ -15,6 +15,8 @@ preserve honor code guidelines for university projects.
 3. `git remote add boilerplate https://github.com/jakenichols2719/c-boilerplate.git`
 4. `git fetch boilerplate`
 5. `git merge boilerplate/main`
+6. `git submodule init`
+7. `git submodule update`
 
 ### Dependencies
 
