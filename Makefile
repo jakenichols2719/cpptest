@@ -18,14 +18,21 @@ CFLAGS:= -Wall -I($(DIR)) -I($(DIR)/headers) -I($(DIR)/munit)
 BUILDFLAGS:= -DBUILD_MAIN
 TESTFLAGS:= -DTEST_MAIN
 
+all: $(SRC)
+	make build
+	make test
+
 build: $(SRC)
-	g++ -o $@ $^ $(CFLAGS) $(BUILDFLAGS)
+	gcc -o $@ $^ $(CFLAGS) $(BUILDFLAGS)
 
 test: $(TESTS) $(MUNIT)
-	g++ -o $@ $^ $(CFLAGS) $(TESTFLAGS)
+	gcc -o $@ $^ $(CFLAGS) $(TESTFLAGS)
 
 fmt: $(SRC)
 	clang-format -i $^
+
+doc: $(SRC)
+	doxygen ./.doxygen-format
 	
 clean:
 	$(CLEAN)

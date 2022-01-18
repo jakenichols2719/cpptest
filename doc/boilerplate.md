@@ -11,7 +11,7 @@ preserve honor code guidelines for university projects.
 ### Installation
 
 1. `git init`
-2. `git remote add origin [your repo]`
+2. `git remote add origin [your repo]` (optional)
 3. `git remote add boilerplate https://github.com/jakenichols2719/c-boilerplate.git`
 4. `git fetch boilerplate`
 5. `git merge boilerplate/main`
@@ -22,6 +22,8 @@ The test library used for c-boilerplate is munit, which comes as a subdirectory 
 
 The format library used for c-boilerplate is clang-format, which does NOT come along with the install. If you want
 to auto-format your code, you will need to install clang.
+
+The `make doc` command uses doxygen, so if you'd like auto documentation you'll need a doxygen install.
 
 ### Upkeep
 
@@ -35,3 +37,4 @@ The built-in makefile allows for build, test, and format features.
 - `make build`: Build all source files in `src`, getting headers from `src/headers`, into `build.exe`
 - `make test`: Build a test executable `test.exe` that runs all munit tests defined in `src/tests` (example provided, more thorough in `src/munit`)
 - `make fmt`: Format all code in `src` using clang-format rules.
+- `make doc`: Generate HTML documentation through doxygen.
