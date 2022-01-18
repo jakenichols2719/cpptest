@@ -1,20 +1,23 @@
+# Project source code directory
+DIR:= ./src
 # Set flags, clean, etc. based on OS
 # Windows
 ifeq ($(OS),Windows_NT)
 	CLEAN:= del build.exe test.exe
+	INCLUDE:= -I($(DIR)) -I($(DIR)/headers) -I($(DIR)/munit)
 else
 	UNAME_S:= $(shell uname -s)
 # Linux
 	ifeq($(UNAME_S),Linux)
 		CLEAN:= rm build test
+		INCLUDE:= -I/$(DIR) -I/$(DIR)/headers -I/$(DIR)/munit
 endif
 
 # Basic, universal flags
-DIR:= ./src
 SRC:= $(wildcard $(DIR)/headers/*.h $(DIR)/*.h $(DIR)/*.c $(DIR)/*.cpp)
 TESTS:= $(wildcard $(DIR)/tests/*.c $(DIR)/tests/*.cpp)
 MUNIT:= $(DIR)/munit/munit.c
-CFLAGS:= -Wall -I($(DIR)) -I($(DIR)/headers) -I($(DIR)/munit)
+CFLAGS:= -Wall $(INCLUDE)
 BUILDFLAGS:= -DBUILD_MAIN
 TESTFLAGS:= -DTEST_MAIN
 
