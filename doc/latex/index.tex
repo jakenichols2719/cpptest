@@ -1,11 +1,22 @@
 \label{index_md_README}%
 \Hypertarget{index_md_README}%
- c-\/boilerplate provides a starting point for consistent and well-\/formatted C projects, built to be lightweight and usable with minimum installation, and providing minimum project functionality to preserve honor code guidelines for university projects.
+ \hypertarget{index_autotoc_md1}{}\doxysection{Description}\label{index_autotoc_md1}
+A very basic c++ testing suite using $<$function$>$ and lambda expressions to create and run tests.\hypertarget{index_autotoc_md2}{}\doxysection{Setup}\label{index_autotoc_md2}
+Add as a git submodule and include {\ttfamily \mbox{\hyperlink{cpptest_8h_source}{cpptest/src/headers/cpptest.\+h}}} and everything is set. Alternatively, you can download the src folder and include it directly--either way, including and compiling with {\ttfamily \mbox{\hyperlink{cpptest_8h_source}{cpptest.\+h}}} will allow test creation.\hypertarget{index_autotoc_md3}{}\doxysection{Usage}\label{index_autotoc_md3}
+Below is a template for creating a test manager, a basic test, and then running it.
 
-You\textquotesingle{}re welcome to make changes, as per the MIT license included, but please fork first! I\textquotesingle{}d also delete this section of the README before you submit anything. Start your README at Project Title and replace it with your title.\hypertarget{index_autotoc_md1}{}\doxysection{Project Title}\label{index_autotoc_md1}
-\hypertarget{index_autotoc_md2}{}\doxysubsection{Description}\label{index_autotoc_md2}
-\hypertarget{index_autotoc_md3}{}\doxysubsection{Setup}\label{index_autotoc_md3}
-\hypertarget{index_autotoc_md4}{}\doxysubsection{Usage}\label{index_autotoc_md4}
-\hypertarget{index_autotoc_md5}{}\doxysubsection{Contribution}\label{index_autotoc_md5}
-\hypertarget{index_autotoc_md6}{}\doxysubsection{Boilerplate Notes (\+DO NOT REMOVE)}\label{index_autotoc_md6}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{TestManager tman;}
+\DoxyCodeLine{tman.NewTest("{}Test"{})-\/>Run = []() \{}
+\DoxyCodeLine{    assert(/*insert statement here*/)}
+\DoxyCodeLine{    assert(/*insert statement here*/)}
+\DoxyCodeLine{    assert(/*insert statement here*/)}
+\DoxyCodeLine{    return true;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{tman.RunAll();}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md4}{}\doxysection{Contribution}\label{index_autotoc_md4}
+If you want to modify this, I just ask that you follow usual Git\+Hub ettiquite and not merge to main. Otherwise, go wild--the purpose of this project is for me to have my own testing suite to use for class, so I\textquotesingle{}m not bothered by other people doing what they want with it as long as the just-\/my-\/edits copy sticks around.\hypertarget{index_autotoc_md5}{}\doxysection{Boilerplate Notes (\+DO NOT REMOVE)}\label{index_autotoc_md5}
 This project is built on a boilerplate setup created by Jake Nichols (109450366), specifically for CSCI 3753 and 3010 at CU Boulder, but generally functional for C programming. It provides testing functionality, formatting, and linting to create readable, consistent, and working code. The base setup can be found at their Git\+Hub page here. Please see the license for usage information. 

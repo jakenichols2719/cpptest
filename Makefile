@@ -16,21 +16,15 @@ endif
 
 # Basic, universal flags
 SRC:= $(wildcard $(DIR)/headers/*.h $(DIR)/*.h $(DIR)/*.c $(DIR)/*.cpp)
-TESTS:= $(wildcard $(DIR)/tests/*.c $(DIR)/tests/*.cpp)
-MUNIT:= $(DIR)/munit/munit.c
-CFLAGS:= -Wall $(INCLUDE)
+CFLAGS:= -Wall -std=c++11 $(INCLUDE)
 BUILDFLAGS:= -DBUILD_MAIN
 TESTFLAGS:= -DTEST_MAIN
 
 all: $(SRC)
 	make build
-	make test
 
 build: $(SRC)
 	g++ -o $@ $^ $(CFLAGS) $(BUILDFLAGS)
-
-test: $(SRC) $(TESTS) $(MUNIT)
-	g++ -o $@ $^ $(CFLAGS) $(TESTFLAGS)
 
 fmt: $(SRC)
 	clang-format -i $^

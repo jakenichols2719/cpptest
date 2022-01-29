@@ -1,0 +1,49 @@
+\hypertarget{class_test_manager}{}\doxysection{Test\+Manager Class Reference}
+\label{class_test_manager}\index{TestManager@{TestManager}}
+
+
+Class to manage \mbox{\hyperlink{class_runnable_test}{Runnable\+Test}} Allows creation of and batch-\/running of tests.  
+
+
+
+
+{\ttfamily \#include $<$cpptest.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_runnable_test}{Runnable\+Test}} $\ast$ \mbox{\hyperlink{class_test_manager_a3695ae04edfdc717afd247be2872f7c5}{New\+Test}} (std\+::string test\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Create a new test and return a pointer to it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_test_manager_adc0064a806683d5299c6cb89a89722a4}\label{class_test_manager_adc0064a806683d5299c6cb89a89722a4}} 
+void {\bfseries Run\+All} ()
+\begin{DoxyCompactList}\small\item\em Run every test created by this \mbox{\hyperlink{class_test_manager}{Test\+Manager}} Runs all tests, output formatted as \textquotesingle{}name $\vert$ Passed/\+Not Passed\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to manage \mbox{\hyperlink{class_runnable_test}{Runnable\+Test}} Allows creation of and batch-\/running of tests. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_test_manager_a3695ae04edfdc717afd247be2872f7c5}\label{class_test_manager_a3695ae04edfdc717afd247be2872f7c5}} 
+\index{TestManager@{TestManager}!NewTest@{NewTest}}
+\index{NewTest@{NewTest}!TestManager@{TestManager}}
+\doxysubsubsection{\texorpdfstring{NewTest()}{NewTest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_runnable_test}{Runnable\+Test}} $\ast$ Test\+Manager\+::\+New\+Test (\begin{DoxyParamCaption}\item[{std\+::string}]{test\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Create a new test and return a pointer to it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em test\+\_\+name} & The name of the test to be created--see \mbox{\hyperlink{class_runnable_test_ad6c81c6952515326216a2e5c63df3b4d}{Runnable\+Test\+::\+Runnable\+Test(std\+::string test\+\_\+name)}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Runnable\+Test$\ast$ A pointer to the created test; use to assign a lambda to Run 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/cpptest.\+h\item 
+src/cpptest.\+cpp\end{DoxyCompactItemize}

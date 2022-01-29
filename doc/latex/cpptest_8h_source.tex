@@ -1,0 +1,37 @@
+\hypertarget{cpptest_8h_source}{}\doxysection{cpptest.\+h}
+\label{cpptest_8h_source}\index{src/headers/cpptest.h@{src/headers/cpptest.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CPP\_TEST\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CPP\_TEST\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <assert.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_runnable_test}{RunnableTest}} \{}
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18     std::string name\_;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{bool} passed\_;}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_runnable_test_ad6c81c6952515326216a2e5c63df3b4d}{RunnableTest}}(std::string test\_name);}
+\DoxyCodeLine{22     std::string \mbox{\hyperlink{class_runnable_test_ab93cd3462339dfd0b79210faf9a9a6fe}{name}}();}
+\DoxyCodeLine{23     std::function<bool()> Run;}
+\DoxyCodeLine{24 \};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{30 \textcolor{keyword}{class }\mbox{\hyperlink{class_test_manager}{TestManager}} \{}
+\DoxyCodeLine{31 \textcolor{keyword}{private}:}
+\DoxyCodeLine{32     std::vector<RunnableTest> tests\_;}
+\DoxyCodeLine{33     std::string namecol\_spacing\_ = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{34 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_runnable_test}{RunnableTest}}* \mbox{\hyperlink{class_test_manager_a3695ae04edfdc717afd247be2872f7c5}{NewTest}}(std::string test\_name);}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_test_manager_adc0064a806683d5299c6cb89a89722a4}{RunAll}}();}
+\DoxyCodeLine{37 \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

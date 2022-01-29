@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C Boilerplate: c-boilerplate</title>
+<title>cpptest: cpptest</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">C Boilerplate
+   <div id="projectname">cpptest
    </div>
   </td>
  </tr>
@@ -62,23 +62,32 @@ $(function() {
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">c-boilerplate </div></div>
+  <div class="headertitle"><div class="title">cpptest </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_README"></a> c-boilerplate provides a starting point for consistent and well-formatted C projects, built to be lightweight and usable with minimum installation, and providing minimum project functionality to preserve honor code guidelines for university projects.</p>
-<p >You're welcome to make changes, as per the MIT license included, but please fork first! I'd also delete this section of the README before you submit anything. Start your README at Project Title and replace it with your title.</p>
+<div class="textblock"><p ><a class="anchor" id="md_README"></a> </p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Project Title</h1>
-<h2><a class="anchor" id="autotoc_md2"></a>
-Description</h2>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Setup</h2>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Usage</h2>
-<h2><a class="anchor" id="autotoc_md5"></a>
-Contribution</h2>
-<h2><a class="anchor" id="autotoc_md6"></a>
-Boilerplate Notes (DO NOT REMOVE)</h2>
+Description</h1>
+<p >A very basic c++ testing suite using &lt;function&gt; and lambda expressions to create and run tests.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Setup</h1>
+<p >Add as a git submodule and include <code><a class="el" href="cpptest_8h_source.html">cpptest/src/headers/cpptest.h</a></code> and everything is set. Alternatively, you can download the src folder and include it directly&ndash;either way, including and compiling with <code><a class="el" href="cpptest_8h_source.html">cpptest.h</a></code> will allow test creation.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Usage</h1>
+<p >Below is a template for creating a test manager, a basic test, and then running it.</p>
+<div class="fragment"><div class="line">TestManager tman;</div>
+<div class="line">tman.NewTest(&quot;Test&quot;)-&gt;Run = []() {</div>
+<div class="line">    assert(/*insert statement here*/)</div>
+<div class="line">    assert(/*insert statement here*/)</div>
+<div class="line">    assert(/*insert statement here*/)</div>
+<div class="line">    return true;</div>
+<div class="line">}</div>
+<div class="line">tman.RunAll();</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
+Contribution</h1>
+<p >If you want to modify this, I just ask that you follow usual GitHub ettiquite and not merge to main. Otherwise, go wild&ndash;the purpose of this project is for me to have my own testing suite to use for class, so I'm not bothered by other people doing what they want with it as long as the just-my-edits copy sticks around.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Boilerplate Notes (DO NOT REMOVE)</h1>
 <p >This project is built on a boilerplate setup created by Jake Nichols (109450366), specifically for CSCI 3753 and 3010 at CU Boulder, but generally functional for C programming. It provides testing functionality, formatting, and linting to create readable, consistent, and working code. The base setup can be found at their GitHub page here. Please see the license for usage information. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

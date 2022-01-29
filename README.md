@@ -1,22 +1,36 @@
-# c-boilerplate
-
-c-boilerplate provides a starting point for consistent and well-formatted C projects, built to be
-lightweight and usable with minimum installation, and providing minimum project functionality to
-preserve honor code guidelines for university projects.
-
-You're welcome to make changes, as per the MIT license included, but please fork first! I'd also
-delete this section of the README before you submit anything. Start your README at Project Title and
-replace it with your title.
-
-# Project Title
+# cpptest
 
 ## Description
 
+A very basic c++ testing suite using <function> and lambda expressions to create and run tests.
+
 ## Setup
+
+Add as a git submodule and include `cpptest/src/headers/cpptest.h` and everything is set. Alternatively,
+you can download the src folder and include it directly--either way, including and compiling with
+`cpptest.h` will allow test creation.
 
 ## Usage
 
+Below is a template for creating a test manager, a basic test, and then running it.
+
+```
+TestManager tman;
+tman.NewTest("Test")->Run = []() {
+    assert(/*insert statement here*/)
+    assert(/*insert statement here*/)
+    assert(/*insert statement here*/)
+    return true;
+}
+tman.RunAll();
+```
+
 ## Contribution
+
+If you want to modify this, I just ask that you follow usual GitHub ettiquite and not merge to main.
+Otherwise, go wild--the purpose of this project is for me to have my own testing suite to use for class,
+so I'm not bothered by other people doing what they want with it as long as the just-my-edits copy sticks
+around.
 
 ## Boilerplate Notes (DO NOT REMOVE)
 
